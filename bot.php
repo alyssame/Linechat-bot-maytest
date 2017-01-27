@@ -45,16 +45,9 @@ if (!is_null($events['events'])) {
 				$messages = [
 							[
 								'type' => 'text',
-								'text' => $text
+								'text' => $res_text1[$a1]
 							],
-							[
-								'type' => 'text',
-								'text' => "โหลลลลลลลล"
-							],
-							[
-								'type' => 'text',
-								'text' => "ว่าไงงงงงงงงงงง"
-							],
+							
 						];
 							
 			}else{
