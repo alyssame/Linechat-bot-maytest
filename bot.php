@@ -120,6 +120,7 @@ $text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอย
 			echo $res_text1[0];
 			if (strposa($text0, $text1, 1)) {
 				
+				echo 11;
 				echo $res_text1[$a1];
 				/*$messages = [
 							[
