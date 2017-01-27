@@ -119,7 +119,7 @@ $text0 = "โย่ว";
 	
 			
 			echo $res_text1[0];
-			if (strposa($text0, $text1, 0)) {
+			if (mb_strpos($text0, "โ", 0, "UTF-8")) {
 				
 				echo 11;
 				echo $res_text1[$a1];
