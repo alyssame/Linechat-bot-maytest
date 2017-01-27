@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 
 			
 			
-			if (strposa($text0,$text1) !== false) {
+			if (strposa($text,$text1) !== false) {
 				$messages = [
 							[
 								'type' => 'text',
