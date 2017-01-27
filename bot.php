@@ -1,6 +1,17 @@
 <?php
 
 
+function strposa($haystack, $needles=array(), $offset=0) {
+				$chr = array();
+				foreach($needles as $needle) {
+						$res = mb_strpos($haystack, $needle, $offset,'UTF-8');
+						if ($res !== false) $chr[$needle] = $res;
+				}
+				if(empty($chr)) return false;
+				return min($chr);
+		}
+			
+
 
 $access_token = '/5DLwaBpj1czSviUnzWgmA22nkRDJOks8ydkVOto0prF8j3bfj6o3tIrcDfvEU+rmZ/apeOZXmEmgcqXPOuc2a4mB00UXMgzRlVXRbp5Y20t26BN9XyYl+wT+kY79meHDI2ekMnW0dV4/Vw8UAbLnAdB04t89/1O/w1cDnyilFU=';
 
@@ -106,7 +117,7 @@ $text0 = "โย่ว";
 	
 			
 			echo $res_text1[0];
-			if (strpos($text0, "โย่ว")) {
+			if (strposa($text0, $text1, 1)) {
 				
 				echo 11;
 				echo $res_text1[$a1];
