@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$messages1 = 
+$messages1 = [
 							[
 								'type' => 'text',
 								'text' => "testttt"
@@ -70,7 +70,8 @@ $messages1 =
 							[
 								'type' => 'text',
 								'text' => "ว่าไงงงงงงงงงงง"
-							];
+							]
+				];
 
 $data1 = [
 				'replyToken' => "assfsdgsdgsgsgsgsgsgsgsgsgsdg",
