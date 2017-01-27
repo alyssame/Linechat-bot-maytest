@@ -26,12 +26,12 @@ if (!is_null($events['events'])) {
 					'text' => $text
 				},
 				{
-					"type":"text",
-					"text":"Hello, user"
+					"type"=>"text",
+					"text"=>"Hello, user"
 				},
 				{
-					"type":"text",
-					"text":"May I help you?"
+					"type"=>"text",
+					"text"=>"May I help you?"
 				}
 			];
 
