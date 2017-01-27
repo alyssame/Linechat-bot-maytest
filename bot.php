@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 			];
 			$post = json_encode($data);
 			
-			echo $post;
+			
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
@@ -47,3 +47,15 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
+
+$messages = [
+				'type' => 'text',
+				'text' => "testtttttttttt"
+			];
+
+$data = [
+				'replyToken' => "sddddddddddddsfsfsfsfsfsfsf",
+				'messages' => [$messages],
+			];
+
+echo json_encode($data);
