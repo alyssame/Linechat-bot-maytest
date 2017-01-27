@@ -17,6 +17,8 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			
+			
+			
 			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
 			
 			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
@@ -76,17 +78,42 @@ if (!is_null($events['events'])) {
 	}
 }
 
+$text0 = "โย่วววววววววว วอสสับ";
+$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
+			
+			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
+			
+			$a1 = array_rand($res_text1);
+			$b1 = $res_text1[$a1];
+			
+			
+			if (strposa($text, $text1, 1)) {
+				$messages = [
+							[
+								'type' => 'text',
+								'text' => $b1
+							]
+							]
+			}
+
+
+
+
+
 
 
 function strposa($haystack, $needles=array(), $offset=0) {
-        $chr = array();
-        foreach($needles as $needle) {
-                $res = strpos($haystack, $needle, $offset);
-                if ($res !== false) $chr[$needle] = $res;
-        }
-        if(empty($chr)) return false;
-        return min($chr);
-}
+				$chr = array();
+				foreach($needles as $needle) {
+						$res = strpos($haystack, $needle, $offset);
+						if ($res !== false) $chr[$needle] = $res;
+				}
+				if(empty($chr)) return false;
+				return min($chr);
+		}
+			
+
+
 
 
 
