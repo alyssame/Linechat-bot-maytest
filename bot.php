@@ -48,14 +48,16 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$messages = [
+$messages1 = [
 				'type' => 'text',
 				'text' => "testtttttttttt"
 			];
 
-$data = [
+$data1 = [
 				'replyToken' => "sddddddddddddsfsfsfsfsfsfsf",
-				'messages' => [$messages],
+				'messages' => [$messages1],
 			];
+			
+$post1 = json_encode($data1);
 
-echo json_encode($data);
+echo "----".$post1;
