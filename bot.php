@@ -116,7 +116,8 @@ $text0 = "โย่ว";
 			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
 			
 			$a1 = array_rand($res_text1);
-	
+			
+			echo mb_strpos($text0, "โ", 0, "UTF-8");
 			
 			echo $res_text1[0];
 			if (mb_strpos($text0, "โ", 0, "UTF-8")) {
