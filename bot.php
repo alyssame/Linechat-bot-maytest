@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 				$messages = [
 							[
 								'type' => 'text',
-								'text' => $res_text1[$a1]
+								'text' => $res_text1[$a1]+$event['message']['id'];
 							],
 							
 						];
@@ -68,7 +68,7 @@ if (!is_null($events['events'])) {
 				$messages = [
 							[
 								'type' => 'text',
-								'text' => $res_text3[$a3]
+								'text' => $res_text3[$a3]+$event['message']['id'];
 							],
 							
 						];
@@ -79,7 +79,7 @@ if (!is_null($events['events'])) {
 			$messages = [
 							[
 								'type' => 'text',
-								'text' => $res_text2[$a2]
+								'text' => $res_text2[$a2]+$event['message']['id'];
 							],
 							
 						];
