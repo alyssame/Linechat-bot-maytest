@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			
 			
 			
-			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
+			/*$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
 			
 			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
 			
@@ -52,6 +52,23 @@ if (!is_null($events['events'])) {
 							],
 						];
 			}
+			
+			*/
+			
+			$messages = [
+							[
+								'type' => 'text',
+								'text' => $text
+							],
+							[
+								'type' => 'text',
+								'text' => "โหลลลลลลลล"
+							],
+							[
+								'type' => 'text',
+								'text' => "ว่าไงงงงงงงงงงง"
+							],
+						];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
