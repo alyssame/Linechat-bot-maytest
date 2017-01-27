@@ -33,11 +33,19 @@ if (!is_null($events['events'])) {
 			
 			
 			
-			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
+			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่','..');
 			
-			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
+			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล','ว่าไงงง');
+			$res_text2= array('ขนาด ask.fm ยังกลับมาฮิต แล้วเราจะมีสิทธิ์กลับมารักกันมั้ย',
+							'แพ้ทางอะทั่วไป แต่แพ้ใจให้แค่เธอ',
+							'เพราะพี่เป็นคนถนัดขวา บางทีก็เลยทำอะไรออกมาไม่ค่อยตรงกับใจ',
+							'โรงพยาบาลยังมีหมอ แล้วเมื่อไหร่หนอใจเธอจะมีเรา',
+							);
 			
 			$a1 = array_rand($res_text1);
+			
+			
+			$a2 = array_rand($res_text2);
 
 			
 			
@@ -56,35 +64,15 @@ if (!is_null($events['events'])) {
 			$messages = [
 							[
 								'type' => 'text',
-								'text' => $text
+								'text' => $res_text2[$a2]
 							],
-							[
-								'type' => 'text',
-								'text' => "โหลลลลลลลล"
-							],
-							[
-								'type' => 'text',
-								'text' => "ว่าไงงงงงงงงงงง"
-							],
+							
 						];
 			}
 			
 			
 			
-			/*$messages = [
-							[
-								'type' => 'text',
-								'text' => $text
-							],
-							[
-								'type' => 'text',
-								'text' => "โหลลลลลลลล"
-							],
-							[
-								'type' => 'text',
-								'text' => "ว่าไงงงงงงงงงงง"
-							],
-						];*/
+		
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
