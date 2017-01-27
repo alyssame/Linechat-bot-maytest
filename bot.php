@@ -2,14 +2,14 @@
 
 
 function strposa($haystack, $needles=array(), $offset=0) {
-				$chr = array();
-				foreach($needles as $needle) {
-						$res = mb_strpos($haystack, $needle, $offset,'UTF-8');
-						if ($res !== false) $chr[$needle] = $res;
-				}
-				if(empty($chr)) return false;
-				return min($chr);
-		}
+        $chr = array();
+        foreach($needles as $needle) {
+                $res = strpos($haystack, $needle, $offset);
+                if ($res !== false) $chr[$needle] = $res;
+        }
+        if(empty($chr)) return false;
+        return min($chr);
+}
 			
 
 
@@ -33,20 +33,20 @@ if (!is_null($events['events'])) {
 			
 			
 			
-			/*$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
+			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
 			
 			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
 			
 			$a1 = array_rand($res_text1);
-			$b1 = $res_text1[$a1];
+
 			
 			
-			if (strposa($text, $text1, 1)) {
+			if (strposa($text0,$text1) !== false) {
 				$messages = [
 							[
 								'type' => 'text',
-								'text' => $b1
-							]
+								'text' => $res_text1[$a1]
+							],
 							]
 			}else{
 
@@ -67,9 +67,9 @@ if (!is_null($events['events'])) {
 						];
 			}
 			
-			*/
 			
-			$messages = [
+			
+			/*$messages = [
 							[
 								'type' => 'text',
 								'text' => $text
@@ -82,7 +82,7 @@ if (!is_null($events['events'])) {
 								'type' => 'text',
 								'text' => "ว่าไงงงงงงงงงงง"
 							],
-						];
+						];*/
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
@@ -108,30 +108,6 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-
-$text0 = "โย่ว";
-
-			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
-			
-			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
-			
-			$a1 = array_rand($res_text1);
-			
-			echo mb_strpos($text0, "โ", 0, "UTF-8");
-			
-			echo $res_text1[0];
-			if (mb_strpos($text0, "โ", 0, "UTF-8")) {
-				
-				echo 11;
-				echo $res_text1[$a1];
-				/*$messages = [
-							[
-								'type' => 'text',
-								'text' => $res_text1[$a1]
-							]
-							]*/
-			}
-
 
 
 
