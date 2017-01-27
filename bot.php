@@ -1,4 +1,18 @@
 <?php
+
+
+function strposa($haystack, $needles=array(), $offset=0) {
+				$chr = array();
+				foreach($needles as $needle) {
+						$res = strpos($haystack, $needle, $offset);
+						if ($res !== false) $chr[$needle] = $res;
+				}
+				if(empty($chr)) return false;
+				return min($chr);
+		}
+			
+
+
 $access_token = '/5DLwaBpj1czSviUnzWgmA22nkRDJOks8ydkVOto0prF8j3bfj6o3tIrcDfvEU+rmZ/apeOZXmEmgcqXPOuc2a4mB00UXMgzRlVXRbp5Y20t26BN9XyYl+wT+kY79meHDI2ekMnW0dV4/Vw8UAbLnAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
@@ -101,16 +115,18 @@ $text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอย
 			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
 			
 			$a1 = array_rand($res_text1);
-			$b1 = $res_text1[$a1];
+	
 			
 			
-			if (strposa($text, $text1, 1)) {
-				$messages = [
+			if (strposa($text0, $text1, 1)) {
+				
+				echo $res_text1[$a1];
+				/*$messages = [
 							[
 								'type' => 'text',
-								'text' => $b1
+								'text' => $res_text1[$a1]
 							]
-							]
+							]*/
 			}
 
 
@@ -119,16 +135,6 @@ $text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอย
 
 
 
-function strposa($haystack, $needles=array(), $offset=0) {
-				$chr = array();
-				foreach($needles as $needle) {
-						$res = strpos($haystack, $needle, $offset);
-						if ($res !== false) $chr[$needle] = $res;
-				}
-				if(empty($chr)) return false;
-				return min($chr);
-		}
-			
 
 
 
