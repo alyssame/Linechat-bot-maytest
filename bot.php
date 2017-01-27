@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => $messages,
 			];
 			$post = json_encode($data);
 			
@@ -58,25 +58,3 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$messages1 = [
-							[
-								'type' => 'text',
-								'text' => "testttt"
-							],
-							[
-								'type' => 'text',
-								'text' => "โหลลลลลลลล"
-							],
-							[
-								'type' => 'text',
-								'text' => "ว่าไงงงงงงงงงงง"
-							]
-				];
-
-$data1 = [
-				'replyToken' => "assfsdgsdgsgsgsgsgsgsgsgsgsdg",
-				'messages' => $messages1,
-			];
-$post1 = json_encode($data1);
-
-echo "-----".$post1;
