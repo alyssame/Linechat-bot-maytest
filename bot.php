@@ -30,6 +30,8 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
+			$id = $event['message']['id'];
+			
 			
 			
 			
@@ -61,6 +63,10 @@ if (!is_null($events['events'])) {
 								'type' => 'text',
 								'text' => $res_text1[$a1]
 							],
+							[
+								'type' => 'text',
+								'text' => $id
+							],
 							
 						];
 							
@@ -69,6 +75,10 @@ if (!is_null($events['events'])) {
 							[
 								'type' => 'text',
 								'text' => $res_text3[$a3]
+							],
+							[
+								'type' => 'text',
+								'text' => $id
 							],
 							
 						];
@@ -80,6 +90,10 @@ if (!is_null($events['events'])) {
 							[
 								'type' => 'text',
 								'text' => $res_text2[$a2]
+							],
+							[
+								'type' => 'text',
+								'text' => $id
 							],
 							
 						];
