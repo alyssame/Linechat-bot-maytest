@@ -18,9 +18,19 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+							[
+								'type' => 'text',
+								'text' => $text
+							],
+							[
+								'type' => 'text',
+								'text' => "โหลลลลลลลล"
+							],
+							[
+								'type' => 'text',
+								'text' => "ว่าไงงงงงงงงงงง"
+							]
+						];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
@@ -48,24 +58,3 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$messages1 =  [
-				'type' => 'text',
-				'text' => "testtttttttttt"
-				],
-				[
-				'type' => 'text',
-				'text' => "testtttttttttt"
-				],
-				[
-				'type' => 'text',
-				'text' => "testtttttttttt"
-				];
-
-$data1 = [
-				'replyToken' => "sddddddddddddsfsfsfsfsfsfsf",
-				'messages' => [$messages1],
-			];
-			
-$post1 = json_encode($data1);
-
-echo "----".$post1;
