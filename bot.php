@@ -110,6 +110,8 @@ if (!is_null($events['events'])) {
 }
 
 $text0 = "โย่ว";
+
+			$text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอยู่');
 			
 			$res_text1 = array('เออ ว่า..','โย่ววว','ดีจ้า','...','มีไร','โหลลลลลล');
 			
@@ -117,7 +119,7 @@ $text0 = "โย่ว";
 	
 			
 			echo $res_text1[0];
-			if (strposa($text0, $text1, 1)) {
+			if (strposa($text0, $text1, 0)) {
 				
 				echo 11;
 				echo $res_text1[$a1];
