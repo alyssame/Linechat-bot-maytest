@@ -74,7 +74,7 @@ $messages1 =
 
 $data1 = [
 				'replyToken' => "assfsdgsdgsgsgsgsgsgsgsgsgsdg",
-				'messages' => [$messages1],
+				'messages' => $messages1,
 			];
 $post1 = json_encode($data1);
 
