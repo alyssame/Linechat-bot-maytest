@@ -48,9 +48,18 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$messages1 = [ 
+$messages1 = [ [
 				'type' => 'text',
 				'text' => "testtttttttttt"
+				],
+				[
+				'type' => 'text',
+				'text' => "testtttttttttt"
+				],
+				[
+				'type' => 'text',
+				'text' => "testtttttttttt"
+				],
 				
 			];
 
