@@ -117,7 +117,7 @@ $text1  = array('ดีจ้า', 'โย่ว', 'โหล', 'ใครอย
 			$a1 = array_rand($res_text1);
 	
 			
-			
+			echo $res_text1[0];
 			if (strposa($text0, $text1, 1)) {
 				
 				echo $res_text1[$a1];
