@@ -42,12 +42,12 @@ if (!is_null($events['events'])) {
 			
 			
 			if (strposa($text,$text1) !== false) {
-				$messages = [
+				$messages =
 							[
 								'type' => 'text',
 								'text' => $res_text1[$a1]
-							],
-							]
+							];
+							
 			}else{
 
 			// Build message to reply back
